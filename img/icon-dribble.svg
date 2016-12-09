@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="33.75" viewBox="0 0 34 33.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="686" y="3559.25" width="34" height="33.75" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="1" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="1"/>
+      <feFlood result="flood" flood-opacity="0.25"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="dribbble_" data-name="dribbble " class="cls-1" d="M702.546,3586.72a12,12,0,1,1,11.952-12A11.974,11.974,0,0,1,702.546,3586.72Zm9.785-10.74a21.93,21.93,0,0,0-6.279-.04,43.555,43.555,0,0,1,1.915,7.05A9.653,9.653,0,0,0,712.331,3575.98Zm-6.247,7.98a44.318,44.318,0,0,0-1.963-7.59c-4.928,1.38-7.619,6.16-7.627,6.16A9.866,9.866,0,0,0,706.084,3583.96Zm-11.043-2.82c3.733-5.64,8.4-6.5,8.4-6.5l-0.8-1.76s-3.212,1.24-9.94,1.45A9.947,9.947,0,0,0,695.041,3581.14Zm-2.136-8.5a34.661,34.661,0,0,0,8.92-1.33,33.946,33.946,0,0,0-3.721-5.42A10.037,10.037,0,0,0,692.905,3572.64Zm7.144-7.48a21.787,21.787,0,0,1,3.722,5.47,16.342,16.342,0,0,0,5.217-3.39A9.834,9.834,0,0,0,700.049,3565.16Zm10.133,3.3a15.345,15.345,0,0,1-5.629,3.75c0.3,0.64.579,1.31,0.851,2a24.659,24.659,0,0,1,6.984-.02A9.721,9.721,0,0,0,710.182,3568.46Zm-7.538-9.2a15.375,15.375,0,1,1-15.35,15.38A15.368,15.368,0,0,1,702.644,3559.26Z" transform="translate(-686 -3559.25)"/>
+</svg>

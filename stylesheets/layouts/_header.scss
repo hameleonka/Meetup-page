@@ -1,0 +1,126 @@
+#home {
+  @include padding(rem(44) 0 rem(344) 0);
+  background-color: $primaryDarkColor;
+  position: relative;
+
+  .home-header {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include autoMargin;
+    width: pxToPercent(1030px, $page_max-width);
+    margin-bottom: rem(117);
+
+
+    &-logo {
+      width: pxToPercent(230px, 1030px);
+      & img {
+        @include res_img;
+      }
+    }
+
+    &-nav {
+      width: pxToPercent(580px, 1030px);
+      & ul{
+        @include display(flex);
+        @include justify-content(space-between);
+
+        & a {
+          @include font($roboto, thin, 15px, #ffffff, uppercase);
+          display: block;
+          padding: 0.6666em;
+        }
+      }
+    }
+  }
+
+  .countdown {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include autoMargin;
+    @include padding(rem(30px),rem(78px));
+    width:rem(970px);
+    border: 1px solid $primaryBrightColor;
+    border-radius: 12px;
+
+    &-colon {
+      @include font($roboto-slab, thin, 130px, #ffffff);
+      line-height: 0.67em;
+      padding-bottom: 0.39em;
+    }
+
+    &-unit {
+      width:rem(135);
+      text-align: center;
+
+      &-days, &-hours, &-minutes, &-seconds {
+        @include font($roboto-slab, thin, 130px, #ffffff);
+        display: block;
+        line-height: 0.67em;
+        margin-bottom: 0.23em;
+      }
+
+      &-smalltext {
+        @include font($roboto-slab, regular, 25px, #ffffff, uppercase);
+        display: block;
+      }
+    }
+  }
+
+  .header-icon-section {
+
+    .header-icon-container {
+      width: pxToPercent(182px, $page_max-width);
+      padding-top: pxToPercent(182px, $page_max-width);
+      height: 0;
+      position: absolute;
+
+      &:nth-child(1) {
+        @include header-icon-position(95px,-20px,5);
+        @include transform(rotate(-15deg));
+      }
+      &:nth-child(2) {
+        @include header-icon-position(220px,-4px,4);
+        @include transform(rotate(5deg));
+      }
+      &:nth-child(3) {
+        @include header-icon-position(356px,25px,3);
+      }
+      &:nth-child(4) {
+        @include header-icon-position(487px,35px,2);
+        @include transform(rotate(-10deg));
+      }
+      &:nth-child(5) {
+        @include header-icon-position(627px,35px,1);
+        @include transform(rotate(10deg));
+      }
+    }
+
+    .header-icon {
+      position: absolute;
+      width:100%;
+      height:100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .polygon {
+    width: 100%;
+    padding-top: pxToPercent(145px, $page_max-width);
+    height: 0;
+    position: absolute;
+    bottom:pxToPercent(-70px, $page_max-width);
+    left:0;
+    z-index: 6;
+
+    &-icon {
+      position: absolute;
+      width:100%;
+      height:100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}

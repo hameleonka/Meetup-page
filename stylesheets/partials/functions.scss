@@ -1,0 +1,7 @@
+// PIXELS TO PERCENTAGES
+// $target: the desired width for the element
+// $parent: the targets parent element width
+//------------------------------------------
+@function pxToPercent($target, $parent) {
+  @return ($target / $parent)* 100%;
+}

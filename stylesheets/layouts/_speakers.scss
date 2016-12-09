@@ -1,0 +1,82 @@
+#speakers {
+  background-color: #FFFFFF;
+  padding: rem(144) 0;
+
+  .speakers-container {
+    width: pxToPercent(967px, $page_max-width);
+    @include autoMargin;
+  }
+
+  .speakers-intro {
+    @include intro-section(light, left);
+    width: pxToPercent(600px, 967px);
+    margin-bottom: rem(62);
+    margin-right: auto;
+  }
+
+  .speakers-section {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include flex-flow(row wrap);
+    width:100%;
+
+    &-unit {
+      @include flex-shrink(0);
+      @include box-sizing(border-box);
+      width:pxToPercent(298px, 967px);
+      background:$primaryBrightColor;
+      padding: pxToPercent(32px, 967px);
+      margin-bottom: pxToPercent(42px, 967px);
+      border-radius: 12px;
+
+      &:hover {
+        background: url('../img/speakers-texture.jpg');
+        cursor: pointer;
+      }
+
+      &.speakers-section-unit-with-icon:hover {
+        background:$primaryBrightColor;
+        cursor: default;
+      }
+
+      & h3 {
+        @include font($roboto, black, 45px, #ffffff);
+        margin-bottom: 0.71111em;
+      }
+
+      & p {
+        @include font($roboto, regular, 18px, #ffffff);
+        margin-bottom: 2.1698em;
+      }
+
+      &-social_block-icon {
+        width:34px;
+        height:34px;
+      }
+
+     &-with-icon {
+       position: relative;
+       padding:0;
+       padding-top: pxToPercent(298px, 967px);
+       height: 0;
+     }
+
+      &-icon {
+        position: absolute;
+        width: 100% - 2*10.1351%;
+        height: 100% - 2*10.1351%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+    }
+  }
+}
+
+
+
+
+
+

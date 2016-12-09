@@ -1,0 +1,116 @@
+@mixin autoMargin {
+  margin: 0 auto;
+}
+
+@mixin res_img {
+  width: 100%;
+  height: auto;
+}
+
+@mixin font($font-family, $font-weight, $font-size, $font-color, $text-transform:none) {
+  font-family: $font-family;
+  font-size: rem(strip-units($font-size));
+  color: $font-color;
+  text-transform: $text-transform;
+
+  @if $font-weight == thin {font-weight: 100;}
+  @else if $font-weight == light {font-weight: 300;}
+  @else if $font-weight == regular {font-weight: 400;}
+  @else if $font-weight == bold {font-weight: 700;}
+  @else if $font-weight == black {font-weight: 900;}
+}
+
+@mixin header-icon-position($left, $bottom, $z-index) {
+  left: pxToPercent($left, $page_max-width);
+  bottom: pxToPercent($bottom, 767px);
+  z-index: $z-index;
+}
+
+@mixin btn-form($background-color) {
+  @include  font($roboto, bold, 22px, #ffffff);
+  font-size: 1.375em;
+  padding: 0.8181em 0;
+  width:100%;
+  background-color:$background-color;
+  text-align: center;
+  border:none;
+  border-radius: 4px;
+  margin: 0.8181em 0;
+  cursor: pointer;
+}
+
+@mixin btn-info($background-color) {
+  @include  font($roboto, regular, 18px, #ffffff);
+  display: block;
+  padding: 0.8181em 0;
+  width: 11.0556em;
+  background-color:$background-color;
+  text-align: center;
+  border:none;
+  border-radius: 13px;
+}
+
+@mixin intro-section($colortheme, $text-align) {
+
+  @if $colortheme==light {
+    & h2 {
+      @include font($roboto, black, 50px, $fontColorDark);
+      margin-bottom: 0.52em;
+      text-align: $text-align;
+    }
+    & p {
+      @include font($roboto, light, 14px, $fontColorDark);
+      line-height: 1.2857em;
+      margin-bottom: 1.7143em;
+      text-align: $text-align;
+    }
+  } @else if $colortheme==dark {
+    & h2 {
+      @include font($roboto, black, 50px, #ffffff);
+      margin-bottom: 0.52em;
+      text-align: $text-align;
+    }
+    & p {
+      @include font($roboto, light, 14px, #ffffff);
+      line-height: 1.2857em;
+      margin-bottom: 1.7143em;
+      text-align: $text-align;
+    }
+  }
+}
+
+@mixin form-fields {
+  & .field {
+    position: relative;
+
+    & label, & input, & textarea {
+      @include font($roboto, light, 19px, #bebebe);
+      font-size: 1.1875em;
+      outline: none;
+      border: none;
+      padding: 0.85em 0.7368em;
+      line-height: 1em;
+      vertical-align: middle;
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+
+    & label {
+      position: absolute;
+      top: 2.5pt;
+    }
+
+    & input, & textarea {
+      border: 1px solid #bebebe;
+      border-radius: 4px;
+      margin-bottom: 1.2em;
+      @include box-sizing(border-box);
+    }
+
+    & textarea {
+      resize: none;
+    }
+  }
+}
+
+

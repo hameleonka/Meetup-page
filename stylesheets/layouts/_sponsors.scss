@@ -1,0 +1,92 @@
+#sponsors {
+  background-color: $primaryDarkColor;
+  padding: rem(162) 0 rem(125) 0;
+  position: relative;
+
+  .sponsors-container {
+    width: pxToPercent(628px, $page_max-width);
+    @include autoMargin;
+  }
+
+  .sponsors-intro {
+    @include intro-section(dark, center);
+    width: 100%;
+    margin-bottom: rem(45);
+  }
+
+  .already-sponsors {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    width: 100%;
+    margin-bottom: rem(60);
+
+    &-unit {
+
+      &:nth-child(1) {
+        position: relative;
+        height: 0;
+          width: pxToPercent(175px, 628px);
+          padding-top: pxToPercent(69px, 628px);
+        }
+
+      &:nth-child(2) {
+        width: pxToPercent(96px, 628px);
+
+        & img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        height: 0;
+        width: pxToPercent(151px, 628px);
+        padding-top: pxToPercent(69px, 628px);
+      }
+
+      &-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+    }
+  }
+
+  .btn-info {
+    @include btn-info($primaryBrightColor);
+    margin: 0 auto;
+  }
+
+  .triangle {
+    width: 100%;
+    padding-top: pxToPercent(122px, $page_max-width);
+    height: 0;
+    position: absolute;
+    z-index: 1;
+
+    &-down {
+      top:0;
+      left:0;
+    }
+
+    &-up {
+      bottom:0;
+      right:0;
+    }
+
+    &-icon {
+      position: absolute;
+      width:100%;
+      height:100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+}
+

@@ -1,0 +1,36 @@
+//resetting styles
+@import "partials/reset";
+
+
+//importing Bourbon library
+@import "../node_modules/bourbon/app/assets/stylesheets/bourbon";
+
+//importing SVG icons
+@import "partials/svg";
+
+//importing all variables
+@import "partials/variables";
+
+//importing all mixins
+@import "partials/mixins";
+
+//importing all functions
+@import "partials/functions";
+
+//importing all layouts
+@import "layouts/header";
+@import "layouts/event-details";
+@import "layouts/envato_elite";
+@import "layouts/speakers";
+@import "layouts/sponsors";
+@import "layouts/_past_events.scss";
+@import "layouts/contact_us";
+@import "layouts/footer";
+
+
+body {
+  max-width: $page_max-width;
+  @include autoMargin;
+
+
+}
