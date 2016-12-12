@@ -41,10 +41,23 @@
 
 @mixin btn-info($background-color) {
   @include  font($roboto, regular, 18px, #ffffff);
+  font-size: 1.125em;
   display: block;
   padding: 0.8181em 0;
   width: 11.0556em;
   background-color:$background-color;
+  text-align: center;
+  border:none;
+  border-radius: 13px;
+}
+
+@mixin btn-register {
+  @include font($roboto, black, 30px, #ffffff);
+  font-size: 1.3em;
+  background-color: $primaryBrightColor;
+  display: block;
+  padding: 0.7em 0.4em;
+  //width: 80%;
   text-align: center;
   border:none;
   border-radius: 13px;
@@ -113,4 +126,7 @@
   }
 }
 
+@mixin respond-to($media) {
+    @media only screen and (max-width: $media) { @content; }
+  }
 

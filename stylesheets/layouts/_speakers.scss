@@ -1,52 +1,115 @@
 #speakers {
   background-color: #FFFFFF;
-  padding: rem(144) 0;
+  //padding: rem(144) 0;
+  padding: pxToPercent(144px, $page_max-width) 0;
 
-  .speakers-container {
-    width: pxToPercent(967px, $page_max-width);
-    @include autoMargin;
+  @include respond-to(920px) {
+    padding: 7% 0;
+  }
+  @include respond-to(715px) {
+    padding: 4% 0;
   }
 
+
+  .speakers-container {
+    width: pxToPercent(972px, $page_max-width);
+    min-width: 972px;
+    @include autoMargin;
+
+    @include respond-to(1100px) {
+      width: 86%;
+      min-width: 0;
+    }
+    @include respond-to(715px){
+      width: 90%;
+    }
+
+  }
   .speakers-intro {
     @include intro-section(light, left);
     width: pxToPercent(600px, 967px);
-    margin-bottom: rem(62);
+    margin-bottom: pxToPercent(62px,967px);
+    //margin-bottom: rem(62);
     margin-right: auto;
+
+    @include respond-to(1100px) {
+      width:75%;
+    }
+    @include respond-to(715px) {
+      width:100%;
+    }
+    @include respond-to(600px) {
+      & h2 {
+        font-size: 2.5rem;
+      }
+    }
   }
 
   .speakers-section {
+    width:100%;
+    //font-size: 0;
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(center);
     @include flex-flow(row wrap);
-    width:100%;
+
+    @include respond-to(715px) {
+      @include justify-content(space-around);
+    }
 
     &-unit {
-      @include flex-shrink(0);
       @include box-sizing(border-box);
-      width:pxToPercent(298px, 967px);
-      background:$primaryBrightColor;
-      padding: pxToPercent(32px, 967px);
-      margin-bottom: pxToPercent(42px, 967px);
+      //display: inline-block;
+      //vertical-align: middle;
+      font-size: 1rem;
+      width:18.39em;
+      padding: 2em;
+      margin: 0 2.625em 2.625em 0;
       border-radius: 12px;
+      background:$primaryBrightColor;
+
+      @include respond-to(1100px) {
+       font-size: 0.85rem;
+        margin: 0 1.5em 1.5em 0;
+      }
+
+      @include respond-to(920px) {
+        font-size: 0.7rem;
+      }
+
+      @include respond-to(715px) {
+        margin-right: 0;
+        font-size: 0.8rem;
+      }
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
 
       &:hover {
         background: url('../img/speakers-texture.jpg');
         cursor: pointer;
       }
+      &.speakers-section-unit-with-icon {
+        &:hover {
+          background:$primaryBrightColor;
+          cursor: default;
+        }
 
-      &.speakers-section-unit-with-icon:hover {
-        background:$primaryBrightColor;
-        cursor: default;
+        @include respond-to(715px) {
+          display:none;
+        }
       }
 
       & h3 {
         @include font($roboto, black, 45px, #ffffff);
+        font-size: 2.8125em;
         margin-bottom: 0.71111em;
       }
 
       & p {
         @include font($roboto, regular, 18px, #ffffff);
+        font-size: 1.125em;
         margin-bottom: 2.1698em;
       }
 
@@ -58,7 +121,7 @@
      &-with-icon {
        position: relative;
        padding:0;
-       padding-top: pxToPercent(298px, 967px);
+       padding-top: 18.625em;
        height: 0;
      }
 
@@ -70,7 +133,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
-
     }
   }
 }

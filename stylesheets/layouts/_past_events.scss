@@ -1,21 +1,55 @@
 #past_events {
+  padding: pxToPercent(116px, $page_max-width) 0 pxToPercent(91px,$page_max-width) 0;
   background-color: #FFFFFF;
-  padding: rem(116) 0 rem(91) 0;
+  //padding: rem(116) 0 rem(91) 0;
+
+  @include respond-to(920px) {
+    padding: 6% 0;
+  }
+
+  @include respond-to(715px) {
+    padding: 4% 0;
+  }
 
   .past_events-container {
     width: pxToPercent(1168px, $page_max-width);
+    //min-width: 1168px;
     @include autoMargin;
   }
 
   .past_events-intro {
     @include intro-section(light, left);
     width: pxToPercent(600px, 1168px);
+    min-width: 600px;
     margin-left: pxToPercent(99px, 1168px);
-    margin-bottom: rem(107);
+    //margin-bottom: rem(107);
+    margin-bottom: pxToPercent(107px,1168px);
+
+    @include respond-to(815px) {
+      margin-left: 0;
+    }
+
+    @include respond-to(600px) {
+      & h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @include respond-to(715px) {
+      width:100%;
+      min-width: 0;
+      margin-bottom: 4%;
+    }
   }
 
   .past_events-section {
-    margin-bottom: rem(98);
+    //margin-bottom: rem(98);
+    margin-bottom: pxToPercent(98px,1168px);
+
+    @include respond-to(715px) {
+      margin-bottom: 4%;
+    }
+
     &-row {
       @include display(flex);
       @include justify-content(center);

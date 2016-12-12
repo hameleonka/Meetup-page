@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meetup</title>
     <link href="stylesheets/main.css" rel="stylesheet">
 
@@ -1013,6 +1014,19 @@
 		C284.929,199.378,283.984,197.188,282.082,195.285z"/>
         </g>
     </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24" enable-background="new 0 0 24 24">
+        <g>
+            <path d="M3,2H1C0.4,2,0,2.4,0,3v2c0,0.6,0.4,1,1,1h2c0.6,0,1-0.4,1-1V3C4,2.4,3.6,2,3,2z" fill="#FFFFFF"/>
+            <path d="m3,10h-2c-0.6,0-1,0.4-1,1v2c0,0.6 0.4,1 1,1h2c0.6,0 1-0.4 1-1v-2c0-0.6-0.4-1-1-1z" fill="#FFFFFF"/>
+            <path d="m3,18h-2c-0.6,0-1,0.4-1,1v2c0,0.6 0.4,1 1,1h2c0.6,0 1-0.4 1-1v-2c0-0.6-0.4-1-1-1z" fill="#FFFFFF"/>
+            <path d="M23,2H9C8.4,2,8,2.4,8,3v2c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1V3C24,2.4,23.6,2,23,2z"
+                  fill="#FFFFFF"/>
+            <path d="m23,10h-14c-0.6,0-1,0.4-1,1v2c0,0.6 0.4,1 1,1h14c0.6,0 1-0.4 1-1v-2c0-0.6-0.4-1-1-1z"
+                  fill="#FFFFFF"/>
+            <path d="m23,18h-14c-0.6,0-1,0.4-1,1v2c0,0.6 0.4,1 1,1h14c0.6,0 1-0.4 1-1v-2c0-0.6-0.4-1-1-1z"
+                  fill="#FFFFFF"/>
+        </g>
+    </symbol>
 </svg>
 
 <header id="home">
@@ -1028,6 +1042,25 @@
                 <li><a href="#past_events">Past events</a></li>
                 <li><a href="#contact_us">Contact us</a></li>
             </ul>
+        </nav>
+        <nav class="home-header-nav-mobile">
+
+            <a href="#" class="mobile-menu-icon">
+                <svg class="mobile-menu-icon-svg">
+                    <use xlink:href="#icon-menu"></use>
+                </svg>
+            </a>
+
+            <div class="mobile-menu-wrapper">
+                <ul class="mobile-menu">
+                    <li><a href="#event_details"> Event details</a></li>
+                    <li><a href="#speakers">Speakers</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="#past_events">Past events</a></li>
+                    <li><a href="#contact_us">Contact us</a></li>
+                </ul>
+            </div>
+
         </nav>
     </div>
     <div class="countdown">
@@ -1086,121 +1119,137 @@
 </header>
 
 <section id="event_details">
-    <div class="event_details-intro">
-        <h2>Welcome!</h2>
-        <p>The biggest envato community meetup in Bangladesh is happening right now! And you can be a part of it
-            too...</p>
-        <p>Get together with members of the Envato community to talk shop, trade war stories, make new friends and see
-            the faces behind the avatars. Whether you’re an author on Envato Market, a client on Envato Studio, or a
-            learner on Tuts+, you are invited!</p>
-        <p>It doesn’t matter as long as you have the motivation and interest to work at the envato and bring cookies to
-            our event. Just kidding, but we don’t mind having more cookies! ;)Head over and fill up the sign up form
-            here so that we can keep track of our guests. Don’t forget to register on our nvite page here too!</p>
+    <div class="event_details-container">
+        <div class="event_details-flex-container">
+            <div class="event_details-intro">
+                <h2>Welcome!</h2>
+                <p>The biggest envato community meetup in Bangladesh is happening right now! And you can be a part of it
+                    too...</p>
+                <p>Get together with members of the Envato community to talk shop, trade war stories, make new friends
+                    and see
+                    the faces behind the avatars. Whether you’re an author on Envato Market, a client on Envato Studio,
+                    or a
+                    learner on Tuts+, you are invited!</p>
+                <p>It doesn’t matter as long as you have the motivation and interest to work at the envato and bring
+                    cookies to
+                    our event. Just kidding, but we don’t mind having more cookies! ;)<br>Head over and fill up the sign
+                    up form
+                    here so that we can keep track of our guests. Don’t forget to register on our nvite page here too!
+                </p>
+                <a class="btn-register" href="#">Sign up for our event</a>
+            </div>
+
+            <section class="event_details-section">
+                <div class="event_details-section-unit">
+                    <div class="event_details-section-unit-icon-container">
+                        <svg class="event_details-section-unit-icon">
+                            <use xlink:href="#icon-5"></use>
+                        </svg>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Meet the Community you’ve always talked with, in real life! This meetup will be all about authors
+                        engaging each other with interesting coversation and topics. We will have loads of fun.</p>
+                </div>
+                <div class="event_details-section-unit">
+                    <div class="event_details-section-unit-icon-container">
+                        <svg class="event_details-section-unit-icon">
+                            <use xlink:href="#icon-1"></use>
+                        </svg>
+                    </div>
+                    <h3>Talk shop</h3>
+                    <p>In this meetup you will get to know the marketplaces better, because that’s why were all here for
+                        right?
+                        Learn a few tips and tricks from experienced authors from all over the country.</p>
+                </div>
+                <div class="event_details-section-unit">
+                    <div class="event_details-section-unit-icon-container">
+                        <svg class="event_details-section-unit-icon">
+                            <use xlink:href="#icon-6"></use>
+                        </svg>
+                    </div>
+                    <h3>War stories</h3>
+                    <p>Gather round fellow authors!
+                        <br>Hear the stories of success from your favorite authors and learn how they we able to tackle
+                        their problems and become successful.</p>
+                </div>
+
+            </section>
+        </div>
+        <div class="event_details-table">
+            <div class="event_details-table-row event_details-table-header">
+                <div class="event_details-table-row-item">Time</div>
+                <div class="event_details-table-row-item">Stuff that will happen</div>
+                <div class="event_details-table-row-item"></div>
+            </div>
+            <div class="event_details-table-row">
+                <div class="event_details-table-row-item">10am - 12pm</div>
+                <div class="event_details-table-row-item">Introduction and presentations about Envato</div>
+                <div class="event_details-table-row-item">
+                    <svg class="event_details-table-icon">
+                        <use xlink:href="#more-icon"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="event_details-table-row">
+                <div class="event_details-table-row-item">12pm - 02pm</div>
+                <div class="event_details-table-row-item">Sessions by honorable guests and Speakers</div>
+                <div class="event_details-table-row-item">
+                    <svg class="event_details-table-icon">
+                        <use xlink:href="#more-icon"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="event_details-table-row">
+                <div class="event_details-table-row-item">02pm - 03pm</div>
+                <div class="event_details-table-row-item">Break and Mingle time with the authors</div>
+                <div class="event_details-table-row-item">
+                    <svg class="event_details-table-icon">
+                        <use xlink:href="#more-icon"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="event_details-table-row">
+                <div class="event_details-table-row-item">03pm - 05pm</div>
+                <div class="event_details-table-row-item">Portfolio Review, Rewards and Ending Presentation</div>
+                <div class="event_details-table-row-item">
+                    <svg class="event_details-table-icon">
+                        <use xlink:href="#more-icon"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="event_details-ps">
+            <p>Please keep in mind that the timings may differ according to the flow of the event. The even is actually
+                day
+                long and we do plan to finish it within our set time but it doesn’t have to be, if we all agree to
+                hangour
+                for some time more, what harm could it do? :)</p>
+        </div>
+        <form class="signUp-form">
+            <fieldset>
+                <legend>Sign up for our event</legend>
+                <div class="field">
+                    <label for="name">Your name</label>
+                    <input id="name" type="text" name="name" value="" required>
+                </div>
+                <div class="field">
+                    <label for="email">Your email</label>
+                    <input id="email" type="email" name="email" value="" required>
+                </div>
+                <div class="field">
+                    <label for="phone">Your phone number</label>
+                    <input id="phone" type="number" name="phonenumber" value="" required>
+                </div>
+                <div class="field">
+                    <label for="username">Envato username</label>
+                    <input id="username" type="text" name="email" value="" required>
+                </div>
+            </fieldset>
+            <button class="signUp-form-btn" type="submit">Let me in!</button>
+            <p>Hurry up, Limited seats availble</p>
+            <p>*we will never spam your email</p>
+        </form>
     </div>
-    <section class="event_details-section">
-        <div class="event_details-section-unit">
-            <div class="event_details-section-unit-icon-container">
-                <svg class="event_details-section-unit-icon">
-                    <use xlink:href="#icon-5"></use>
-                </svg>
-            </div>
-            <h3>Community</h3>
-            <p>Meet the Community you’ve always talked with, in real life! This meetup will be all about authors
-                engaging each other with interesting coversation and topics. We will have loads of fun.</p>
-        </div>
-        <div class="event_details-section-unit">
-            <div class="event_details-section-unit-icon-container">
-                <svg class="event_details-section-unit-icon">
-                    <use xlink:href="#icon-1"></use>
-                </svg>
-            </div>
-            <h3>Talk shop</h3>
-            <p>In this meetup you will get to know the marketplaces better, because that’s why were all here for right?
-                Learn a few tips and tricks from experienced authors from all over the country.</p>
-        </div>
-        <div class="event_details-section-unit">
-            <div class="event_details-section-unit-icon-container">
-                <svg class="event_details-section-unit-icon">
-                    <use xlink:href="#icon-6"></use>
-                </svg>
-            </div>
-            <h3>War stories</h3>
-            <p>In this meetup you will get to know the marketplaces better, because that’s why were all here for right?
-                Learn a few tips and tricks from experienced authors from all over the country.</p>
-        </div>
-    </section>
-    <div class="event_details-table">
-        <div class="event_details-table-row event_details-table-header">
-            <div class="event_details-table-row-item">Time</div>
-            <div class="event_details-table-row-item">Stuff that will happen</div>
-            <div class="event_details-table-row-item"></div>
-        </div>
-        <div class="event_details-table-row">
-            <div class="event_details-table-row-item">10am - 12pm</div>
-            <div class="event_details-table-row-item">Introduction and presentations about Envato</div>
-            <div class="event_details-table-row-item">
-                <svg class="event_details-table-icon">
-                    <use xlink:href="#more-icon"></use>
-                </svg>
-            </div>
-        </div>
-        <div class="event_details-table-row">
-            <div class="event_details-table-row-item">12pm - 02pm</div>
-            <div class="event_details-table-row-item">Sessions by honorable guests and Speakers</div>
-            <div class="event_details-table-row-item">
-                <svg class="event_details-table-icon">
-                    <use xlink:href="#more-icon"></use>
-                </svg>
-            </div>
-        </div>
-        <div class="event_details-table-row">
-            <div class="event_details-table-row-item">02pm - 03pm</div>
-            <div class="event_details-table-row-item">Break and Mingle time with the authors</div>
-            <div class="event_details-table-row-item">
-                <svg class="event_details-table-icon">
-                    <use xlink:href="#more-icon"></use>
-                </svg>
-            </div>
-        </div>
-        <div class="event_details-table-row">
-            <div class="event_details-table-row-item">03pm - 05pm</div>
-            <div class="event_details-table-row-item">Portfolio Review, Rewards and Ending Presentation</div>
-            <div class="event_details-table-row-item">
-                <svg class="event_details-table-icon">
-                    <use xlink:href="#more-icon"></use>
-                </svg>
-            </div>
-        </div>
-    </div>
-    <div class="event_details-ps">
-        <p>Please keep in mind that the timings may differ according to the flow of the event. The even is actually day
-            long and we do plan to finish it within our set time but it doesn’t have to be, if we all agree to hangour
-            for some time more, what harm could it do? :)</p>
-    </div>
-    <form class="signUp-form">
-        <fieldset>
-            <legend>Sign up for our event</legend>
-            <div class="field">
-                <label for="name">Your name</label>
-                <input id="name" type="text" name="name" value="" required>
-            </div>
-            <div class="field">
-                <label for="email">Your email</label>
-                <input id="email" type="email" name="email" value="" required>
-            </div>
-            <div class="field">
-                <label for="phone">Your phone number</label>
-                <input id="phone" type="number" name="phonenumber" value="" required>
-            </div>
-            <div class="field">
-                <label for="username">Envato username</label>
-                <input id="username" type="text" name="email" value="" required>
-            </div>
-        </fieldset>
-        <button class="signUp-form-btn" type="submit">Let me in!</button>
-        <p>Hurry up, Limited seats availble</p>
-        <p>*we will never spam your email</p>
-    </form>
 </section>
 
 <section class="envato_elite">
@@ -1419,10 +1468,9 @@
     <div class="sponsors-container">
         <div class="sponsors-intro">
             <h2>Sponsor our event!</h2>
-            <p>If you want to help us making this event lively and successful, help us by sponsoring our event!<br>
+            <p>If you want to help us making this event lively and successful, help us by sponsoring our event!
                 This will help us bring in more people, have better livestreaming equipment, maybe even our own
-                chef!<br>
-                You can also sponsor us by giving away free swag at the event!</p>
+                chef!You can also sponsor us by giving away free swag at the event!</p>
             <p>Here’s who have sponsored us already:</p>
         </div>
         <div class="already-sponsors">
@@ -1509,6 +1557,13 @@
                 </fieldset>
                 <button class="contact_us-form-btn" type="submit">Send message</button>
             </form>
+        </div>
+        <div class="contact_us-block mobile">
+            <div class="contact_us-address mobile">
+                <p>Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122, Kingdom of Australia</p>
+                <a class="btn-info" href="#">View map</a>
+                <a class="btn-info" href="#">Contact us</a>
+            </div>
         </div>
     </div>
 

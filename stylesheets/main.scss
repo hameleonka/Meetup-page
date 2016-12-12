@@ -1,6 +1,8 @@
+@import "../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
 //resetting styles
 @import "partials/reset";
-
 
 //importing Bourbon library
 @import "../node_modules/bourbon/app/assets/stylesheets/bourbon";
@@ -28,9 +30,17 @@
 @import "layouts/footer";
 
 
+html {
+  @include respond-to(815px) {
+    font-size: 0.9rem;
+  }
+}
+
 body {
   max-width: $page_max-width;
   @include autoMargin;
 
 
 }
+
+

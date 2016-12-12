@@ -1,19 +1,35 @@
 footer {
-  background-color: $primaryBrightColor;
   position: relative;
+  background-color: $primaryBrightColor;
+  //padding: 3.5em 0 2.5em 0;
+  padding: pxToPercent(56px,$page_max-width) 0 pxToPercent(40px,$page_max-width) 0;
   font-size: 1rem;
-  padding: 3.5em 0 2.5em 0;
+
+  @include respond-to(1100px) {
+    font-size: 0.85rem;
+  }
+
+  @include respond-to(920px) {
+    //font-size: 0.7rem;
+    padding: 3% 0 2% 0;
+  }
 
   .footer-container {
     @include display(flex);
     @include justify-content(center);
     @include align-items(center);
     @include flex-flow(column wrap);
+
     width:pxToPercent(434px, $page_max-width);
+    min-width: 434px;
     @include autoMargin;
 
     .footer-social_block {
       margin-bottom: 1.6em;
+
+      @include respond-to(920px) {
+        margin-bottom: 1em;
+      }
 
       &_icon {
         width:3.2em;
@@ -25,6 +41,7 @@ footer {
 
     & p {
       @include font($roboto,light,18px,#ffffff);
+      font-size: 1.125em;
       line-height: 1.2em;
     }
   }
@@ -37,6 +54,10 @@ footer {
     font-size: 1em;
     width: 2.2em;
     display: block;
+
+    @include respond-to(700px) {
+      right:5em;
+    }
 
     .icon-up {
       width:100%;

@@ -1,5 +1,5 @@
 #contact_us {
-  width: 100%;
+  //width: 100%;
 
   .contact_us-container {
     position: relative;
@@ -25,17 +25,45 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
       @include display(flex);
       @include justify-content(space-between);
       @include align-items(center);
+
+
       width: pxToPercent(970px, $page_max-width);
-      padding: pxToPercent(57px, $page_max-width) pxToPercent(71px, $page_max-width);
+      padding: 4% 5%;
       @include box-sizing(border-box);
+
       background-color: #FFFFFF;
+
+      font-size: 1rem;
+
+      @include respond-to(1100px) {
+        font-size: 0.8rem;
+      }
+
+      @include respond-to(920px) {
+         font-size: 0.7rem;
+         padding: 2% 3%;
+       }
+
+      @include respond-to(715px) {
+        padding: 1.5%;
+      }
+
+      @include respond-to(600px) {
+        display: none;
+      }
 
       .contact_us-address {
         flex-basis: pxToPercent(300px, 970px);
-        padding: 0 rem(28);
+        padding: 0 1.75em;
+
+        @include respond-to(715px) {
+          flex-basis: 35%;
+          padding: 0;
+        }
 
         .contact_us-address_icon-container {
           position: relative;
@@ -43,7 +71,7 @@
           padding-top: pxToPercent(139px, 272px);
           height: 0;
           @include autoMargin;
-          margin-bottom:rem(44);
+          margin-bottom:2.75em;
 
           .contact_us-address_icon {
             position: absolute;
@@ -56,8 +84,9 @@
 
         & p {
           @include font($roboto, light, 18px, #454444);
+          font-size: 1.125em ;
           line-height:1.1667em;
-          margin-bottom: rem(27);
+          margin-bottom: 1.5em;
           text-align: center;
         }
 
@@ -65,11 +94,24 @@
           @include btn-info($primaryBrightColor);
           margin: 0 auto;
         }
-
       }
 
       .contact_us-form {
         flex-basis: pxToPercent(450px, 970px);
+        //font-size: 1rem;
+        //flex-grow:1;
+
+        @include respond-to(1100px) {
+          flex-basis: 55%;
+        }
+
+        @include respond-to(715px) {
+          flex-basis: 60%;
+        }
+
+        @include respond-to(600px) {
+          display: none;
+        }
 
         & fieldset {
           @include autoMargin;
@@ -81,6 +123,35 @@
         &-btn {
           @include btn-form($primaryDarkColor);
           margin: 0.3em 0;
+        }
+      }
+
+      &.mobile {
+        display: none;
+        width: 80%;
+        padding: 3%;
+        font-size: 0.9rem;
+
+        @include respond-to(600px) {
+          display: block;
+        }
+
+        .contact_us-address.mobile {
+          flex-basis:100%;
+          @include display(flex);
+          @include justify-content(space-around);
+          @include align-items(center);
+         @include flex-flow(row wrap);
+
+
+          & p {
+            flex-basis:1000%;
+            margin-bottom: 0.5em;
+          }
+
+          & a {
+
+          }
         }
       }
 
