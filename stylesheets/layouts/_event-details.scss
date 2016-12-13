@@ -1,24 +1,27 @@
 #event_details {
-  padding:pxToPercent(60px,$page_max-width) 0 pxToPercent(158px, $page_max-width) 0;
+  padding: pxToPercent(60px, $page_max-width) 0 pxToPercent(158px, $page_max-width) 0;
   background-color: #FFFFFF;
 
   @include respond-to(920px) {
-    padding-bottom:8%;
+    padding-bottom: 8%;
   }
 
   @include respond-to(715px) {
-    padding-top:0;
+    padding-top: 0;
   }
 
   @include respond-to(600px) {
-    padding-bottom:4%;
+    padding-bottom: 4%;
+  }
+
+  @include respond-to(450px) {
+    padding-top: 4%;
   }
 
   .event_details-container {
     position: relative;
     width: pxToPercent(1030px, $page_max-width);
     min-width: 1030px;
-    //@include padding(rem(60) 0 rem(158) 0);
     @include autoMargin;
 
     @include respond-to(1100px) {
@@ -26,12 +29,21 @@
       min-width: 0;
     }
 
+    @include respond-to(400px) {
+      width: 100%;
+    }
+
     .event_details-flex-container {
+
       @include respond-to(715px) {
         @include display(flex);
         @include justify-content(space-between);
         @include align-items(center);
         @include flex-wrap(nowrap);
+      }
+
+      @include respond-to(450px) {
+        @include flex-direction(column);
       }
     }
   }
@@ -39,17 +51,28 @@
   .event_details-intro {
     @include intro-section(light, left);
     width: pxToPercent(532px, 1030px);
-    //margin-bottom: rem(139);
-    margin-bottom: pxToPercent(139px,1030px);
+    margin-bottom: pxToPercent(139px, 1030px);
 
-    @include respond-to(715px) {
-      width:50%;
+    @include respond-to(920px) {
+      margin-bottom: 7%;
     }
-
+    @include respond-to(715px) {
+      width: 50%;
+    }
     @include respond-to(600px) {
       & h2 {
         font-size: 2.5rem;
       }
+    }
+    @include respond-to(450px) {
+      width: 100%;
+      & h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @include respond-to(400px) {
+      width: 90%;
     }
 
     & a {
@@ -60,26 +83,36 @@
       @include respond-to(715px) {
         display: block;
       }
+      @include respond-to(450px) {
+        margin-top: 4%;
+        width: 50%;
+      }
+      @include respond-to(400px) {
+        font-size: 1em;
+        font-weight: 700;
+      }
     }
-
-    @include respond-to(920px) {
-       margin-bottom: 7%;
-     }
   }
 
   .event_details-section {
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(center);
-    //margin-bottom: rem(99);
-    margin-bottom: pxToPercent(99px,1030px);
+    margin-bottom: pxToPercent(99px, 1030px);
 
     @include respond-to(715px) {
       @include flex-flow(column);
-      width:47%;
+      width: 47%;
       position: relative;
       z-index: 10;
       margin-bottom: 2%;
+    }
+
+    @include respond-to(450px) {
+      width: 80%;
+    }
+    @include respond-to(400px) {
+      width: 90%;
     }
 
     &-unit {
@@ -95,8 +128,13 @@
         position: relative;
 
         @include respond-to(715px) {
-          width:40%;
+          width: 40%;
           padding-top: 40%;
+        }
+
+        @include respond-to(450px) {
+          width: 30%;
+          padding-top: 30%;
         }
 
         .event_details-section-unit-icon {
@@ -110,6 +148,7 @@
 
       & h3 {
         @include font($roboto, black, 35px, $fontColorDark);
+        font-size: 2.1875rem;
         padding-top: 1.0571em;
         padding-bottom: 0.5143em;
 
@@ -117,15 +156,20 @@
           padding-top: 0.3em;
           padding-bottom: 0.3em;
         }
+
+        @include respond-to(715px) {
+          font-size: 1.8rem;
+        }
+        @include respond-to(450px) {
+          font-size: 1.5rem;
+        }
       }
 
       & p {
         @include font ($roboto, light, 14px, $fontColorDark);
         line-height: 1.2857em;
       }
-
     }
-
   }
 
   .event_details-table {
@@ -134,21 +178,22 @@
     @include justify-content(space-between);
 
     width: 100%;
-    margin-bottom: pxToPercent(35px,1030px);
+    margin-bottom: pxToPercent(35px, 1030px);
 
     border-radius: 13px;
     overflow: hidden;
-    //margin-bottom: rem(35);
 
     font-size: 1rem;
 
     @include respond-to(960px) {
-       font-size: 0.8rem;
-     }
+      font-size: 0.8rem;
+    }
     @include respond-to(715px) {
       font-size: 0.7rem;
     }
-
+    @include respond-to(500px) {
+      font-size: 0.6rem;
+    }
 
     &-row {
       @include display(flex);
@@ -168,6 +213,10 @@
         @include flex-flow(row nowrap);
         @include align-items(center);
         padding: 1.0454em;
+
+        @include respond-to(500px) {
+          padding: 1.0454em 0;
+        }
 
         &:nth-child(1) {
           @include flex-basis(pxToPercent(228px, 1030px));
@@ -197,6 +246,10 @@
 
       .event_details-table-row-item {
         padding: 0.8666em;
+
+        @include respond-to(500px) {
+          padding: 0.8666em 0;
+        }
       }
     }
   }
@@ -214,6 +267,10 @@
       font-size: 0.875em;
       line-height: 1.0714em;
       text-align: center;
+
+      @include respond-to(500px) {
+        font-size: 0.8em;
+      }
     }
   }
 
@@ -260,7 +317,7 @@
         text-align: center;
       }
 
-     @include form-fields;
+      @include form-fields;
 
     }
 

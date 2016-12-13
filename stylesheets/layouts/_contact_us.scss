@@ -1,6 +1,4 @@
 #contact_us {
-  //width: 100%;
-
   .contact_us-container {
     position: relative;
 
@@ -30,7 +28,6 @@
       @include justify-content(space-between);
       @include align-items(center);
 
-
       width: pxToPercent(970px, $page_max-width);
       padding: 4% 5%;
       @include box-sizing(border-box);
@@ -42,16 +39,13 @@
       @include respond-to(1100px) {
         font-size: 0.8rem;
       }
-
       @include respond-to(920px) {
-         font-size: 0.7rem;
-         padding: 2% 3%;
-       }
-
+        font-size: 0.7rem;
+        padding: 2% 3%;
+      }
       @include respond-to(715px) {
         padding: 1.5%;
       }
-
       @include respond-to(600px) {
         display: none;
       }
@@ -67,11 +61,11 @@
 
         .contact_us-address_icon-container {
           position: relative;
-          width:pxToPercent(131px, 272px);
+          width: pxToPercent(131px, 272px);
           padding-top: pxToPercent(139px, 272px);
           height: 0;
           @include autoMargin;
-          margin-bottom:2.75em;
+          margin-bottom: 2.75em;
 
           .contact_us-address_icon {
             position: absolute;
@@ -84,8 +78,8 @@
 
         & p {
           @include font($roboto, light, 18px, #454444);
-          font-size: 1.125em ;
-          line-height:1.1667em;
+          font-size: 1.125em;
+          line-height: 1.1667em;
           margin-bottom: 1.5em;
           text-align: center;
         }
@@ -98,17 +92,13 @@
 
       .contact_us-form {
         flex-basis: pxToPercent(450px, 970px);
-        //font-size: 1rem;
-        //flex-grow:1;
 
         @include respond-to(1100px) {
           flex-basis: 55%;
         }
-
         @include respond-to(715px) {
           flex-basis: 60%;
         }
-
         @include respond-to(600px) {
           display: none;
         }
@@ -116,7 +106,6 @@
         & fieldset {
           @include autoMargin;
           width: 100%;
-
           @include form-fields;
         }
 
@@ -136,27 +125,32 @@
           display: block;
         }
 
+        @include respond-to(400px) {
+          font-size: 0.7rem;
+        }
+
         .contact_us-address.mobile {
-          flex-basis:100%;
+          flex-basis: 100%;
           @include display(flex);
           @include justify-content(space-around);
           @include align-items(center);
-         @include flex-flow(row wrap);
-
+          @include flex-flow(row wrap);
 
           & p {
-            flex-basis:1000%;
-            margin-bottom: 0.5em;
+            flex-basis: 1000%;
+            margin-bottom: 1em;
           }
 
           & a {
+            width: 9em;
 
+            @include respond-to(400px) {
+              width: 9em;
+              padding: 0.9em 0;
+            }
           }
         }
       }
-
     }
-
   }
-
 }

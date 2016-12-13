@@ -1,6 +1,5 @@
 #speakers {
   background-color: #FFFFFF;
-  //padding: rem(144) 0;
   padding: pxToPercent(144px, $page_max-width) 0;
 
   @include respond-to(920px) {
@@ -9,7 +8,6 @@
   @include respond-to(715px) {
     padding: 4% 0;
   }
-
 
   .speakers-container {
     width: pxToPercent(972px, $page_max-width);
@@ -20,34 +18,44 @@
       width: 86%;
       min-width: 0;
     }
-    @include respond-to(715px){
+    @include respond-to(715px) {
       width: 90%;
+    }
+    @include respond-to(450px) {
+      width: 95%;
     }
 
   }
   .speakers-intro {
     @include intro-section(light, left);
     width: pxToPercent(600px, 967px);
-    margin-bottom: pxToPercent(62px,967px);
-    //margin-bottom: rem(62);
+    margin-bottom: pxToPercent(62px, 967px);
     margin-right: auto;
 
     @include respond-to(1100px) {
-      width:75%;
+      width: 75%;
     }
     @include respond-to(715px) {
-      width:100%;
+      width: 100%;
     }
     @include respond-to(600px) {
       & h2 {
         font-size: 2.5rem;
       }
     }
+    @include respond-to(450px) {
+      & h2 {
+        font-size: 2rem;
+      }
+    }
+    @include respond-to(450px) {
+      width: 95%;
+      padding-left: 2.5%;
+    }
   }
 
   .speakers-section {
-    width:100%;
-    //font-size: 0;
+    width: 100%;
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(center);
@@ -59,17 +67,15 @@
 
     &-unit {
       @include box-sizing(border-box);
-      //display: inline-block;
-      //vertical-align: middle;
       font-size: 1rem;
-      width:18.39em;
+      width: 18.39em;
       padding: 2em;
       margin: 0 2.625em 2.625em 0;
       border-radius: 12px;
-      background:$primaryBrightColor;
+      background: $primaryBrightColor;
 
       @include respond-to(1100px) {
-       font-size: 0.85rem;
+        font-size: 0.85rem;
         margin: 0 1.5em 1.5em 0;
       }
 
@@ -82,6 +88,20 @@
         font-size: 0.8rem;
       }
 
+      @include respond-to(500px) {
+        margin-right: 0;
+        font-size: 0.7rem;
+        padding: 1.3em;
+      }
+
+      @include respond-to(435px) {
+        width: 80%;
+
+        &:nth-child(n+3) {
+          display: none;
+        }
+      }
+
       &:nth-of-type(3n) {
         margin-right: 0;
       }
@@ -92,12 +112,12 @@
       }
       &.speakers-section-unit-with-icon {
         &:hover {
-          background:$primaryBrightColor;
+          background: $primaryBrightColor;
           cursor: default;
         }
 
         @include respond-to(715px) {
-          display:none;
+          display: none;
         }
       }
 
@@ -105,25 +125,35 @@
         @include font($roboto, black, 45px, #ffffff);
         font-size: 2.8125em;
         margin-bottom: 0.71111em;
+
+        @include respond-to(500px) {
+          font-size: 2.2em;
+          margin-bottom: 0.5em;
+        }
       }
 
       & p {
         @include font($roboto, regular, 18px, #ffffff);
         font-size: 1.125em;
         margin-bottom: 2.1698em;
+
+        @include respond-to(500px) {
+          font-size: 1.3em;
+          margin-bottom: 1.5em;
+        }
       }
 
       &-social_block-icon {
-        width:34px;
-        height:34px;
+        width: 34px;
+        height: 34px;
       }
 
-     &-with-icon {
-       position: relative;
-       padding:0;
-       padding-top: 18.625em;
-       height: 0;
-     }
+      &-with-icon {
+        position: relative;
+        padding: 0;
+        padding-top: 18.625em;
+        height: 0;
+      }
 
       &-icon {
         position: absolute;
@@ -133,6 +163,20 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+  }
+
+  .btn-info {
+    @include btn-info($primaryDarkColor);
+    margin: 0 auto;
+    display: none;
+
+    @include respond-to(435px) {
+      display: block;
+    }
+    @include respond-to(400px) {
+      width: 10em;
+      padding: 0.6em 0;
     }
   }
 }

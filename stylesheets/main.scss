@@ -34,6 +34,10 @@ html {
   @include respond-to(815px) {
     font-size: 0.9rem;
   }
+
+  @include respond-to(400px) {
+    font-size: 0.85rem;
+  }
 }
 
 body {
