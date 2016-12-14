@@ -43,7 +43,8 @@
       }
 
       @include respond-to(450px) {
-        @include flex-direction(column);
+        @include flex-wrap(wrap);
+        @include justify-content(center);
       }
     }
   }
@@ -66,6 +67,7 @@
     }
     @include respond-to(450px) {
       width: 100%;
+      margin-bottom: 1rem;
       & h2 {
         font-size: 2rem;
       }
@@ -86,6 +88,7 @@
       @include respond-to(450px) {
         margin-top: 4%;
         width: 50%;
+        flex:1 0 auto;
       }
       @include respond-to(400px) {
         font-size: 1em;
@@ -101,15 +104,16 @@
     margin-bottom: pxToPercent(99px, 1030px);
 
     @include respond-to(715px) {
-      @include flex-flow(column);
-      width: 47%;
+      width: 45%;
       position: relative;
       z-index: 10;
       margin-bottom: 2%;
+      flex-wrap:wrap;
     }
 
     @include respond-to(450px) {
-      width: 80%;
+      width: 100%;
+
     }
     @include respond-to(400px) {
       width: 90%;
@@ -119,6 +123,11 @@
       @include flex-basis(pxToPercent(300px, 1030px));
       text-align: center;
       margin-bottom: 1.1em;
+
+      @include respond-to(715px) {
+        flex-basis: 100%;
+
+      }
 
       &-icon-container {
         @include autoMargin;
