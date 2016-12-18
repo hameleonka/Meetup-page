@@ -95,6 +95,7 @@
 @mixin form-fields {
   & .field {
     position: relative;
+    margin-bottom: 1.6em;
 
     & label, & input, & textarea {
       @include font($roboto, light, 19px, #bebebe);
@@ -111,13 +112,29 @@
     & label {
       position: absolute;
       top: 2.5pt;
+      @include transition(all 0.5s ease-in);
+      //&:focus {
+      //  font-size: 1em;
+      //  padding:0;
+      //  transform: translate(0, -1.5em);
+      //}
     }
 
     & input, & textarea {
       border: 1px solid #bebebe;
       border-radius: 4px;
-      margin-bottom: 1.2em;
       @include box-sizing(border-box);
+
+      &:focus {
+        border-color:$primaryBrightColor;
+        color:$primaryDarkColor;
+      }
+
+      &:focus + label, &.not-empty + label {
+        font-size: 1em;
+        padding:0;
+        @include transform(translateY(-1.5em));
+      }
     }
 
     & textarea {

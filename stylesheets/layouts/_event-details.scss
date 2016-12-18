@@ -315,6 +315,16 @@
       display: none;
     }
 
+    &.show-centered {
+      display: block;
+      position: fixed;
+      z-index: 20;
+      top: 50vh;
+      left: 50vw;
+      @include transform(translate(-50%, -50%));
+      font-size: 0.8rem;
+    }
+
     & fieldset {
       @include autoMargin;
       width: 100%;
@@ -322,12 +332,11 @@
       & legend {
         @include font($roboto, bold, 30px, $fontColorDark);
         font-size: 1.875em;
-        margin-bottom: 0.6666em;
+        margin-bottom: 0.9em;
         text-align: center;
       }
 
       @include form-fields;
-
     }
 
     &-btn {
@@ -342,10 +351,37 @@
       @include autoMargin;
       text-align: center;
     }
-  }
 
+    & .close-icon {
+      display:none;
+      @include respond-to(715px) {
+        display: block;
+        position: absolute;
+        z-index: 21;
+        top:2%;
+        right:2%;
+        width:1.8rem;
+        height:1.8rem;
+        fill:#90d23d;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
+.modal-overlay {
+  position: fixed;
+  z-index: 15;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+
+  &.hidden {
+    display: none;
+  }
+}
 
 
 

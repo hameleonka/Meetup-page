@@ -1027,6 +1027,24 @@
                   fill="#FFFFFF"/>
         </g>
     </symbol>
+    <symbol id="show_more-icon" viewBox="0 0 487.622 487.622">
+        <g>
+            <g>
+                <circle style="fill:#90d23d;" cx="243.811" cy="243.811" r="243.811"/>
+                <path style="opacity:0.37;fill:#B5D24F;enable-background:new    ;" d="M486.554,266.584L297.11,144.688l35.333,99.123
+			l-155.541-99.123l47.62,114.996l-120.209,83.25L331.841,471.23C416.228,438.541,477.875,360.247,486.554,266.584z"/>
+                <g>
+                    <polygon style="fill:#FFFFFF;" points="176.902,144.688 104.313,144.688 190.512,243.811 104.313,342.934 176.902,342.934
+				263.101,243.811 			"/>
+                    <polygon style="fill:#FFFFFF;" points="297.11,144.688 224.522,144.688 310.721,243.811 224.522,342.934 297.11,342.934
+				383.309,243.811 			"/>
+                </g>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 16 16">
+        <path d="M8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zM12.2 10.8l-1.4 1.4-2.8-2.8-2.8 2.8-1.4-1.4 2.8-2.8-2.8-2.8 1.4-1.4 2.8 2.8 2.8-2.8 1.4 1.4-2.8 2.8 2.8 2.8z"/>
+    </symbol>
 </svg>
 
 <header id="home">
@@ -1065,22 +1083,22 @@
     </div>
     <div class="countdown">
         <div class="countdown-unit">
-            <span class="countdown-unit-days">20</span>
+            <span class="countdown-unit-days"></span>
             <span class="countdown-unit-smalltext">Days</span>
         </div>
         <span class="countdown-colon">:</span>
         <div class="countdown-unit">
-            <span class="countdown-unit-hours">03</span>
+            <span class="countdown-unit-hours"></span>
             <span class="countdown-unit-smalltext">Hours</span>
         </div>
         <span class="countdown-colon">:</span>
         <div class="countdown-unit">
-            <span class="countdown-unit-minutes">06</span>
+            <span class="countdown-unit-minutes"></span>
             <span class="countdown-unit-smalltext">Minutes</span>
         </div>
         <span class="countdown-colon">:</span>
         <div class="countdown-unit">
-            <span class="countdown-unit-seconds">52</span>
+            <span class="countdown-unit-seconds"></span>
             <span class="countdown-unit-smalltext">Seconds</span>
         </div>
     </div>
@@ -1229,25 +1247,29 @@
             <fieldset>
                 <legend>Sign up for our event</legend>
                 <div class="field">
-                    <label for="name">Your name</label>
                     <input id="name" type="text" name="name" value="" required>
+                    <label for="name">Your name</label>
                 </div>
                 <div class="field">
-                    <label for="email">Your email</label>
                     <input id="email" type="email" name="email" value="" required>
+                    <label for="email">Your email</label>
+
                 </div>
                 <div class="field">
-                    <label for="phone">Your phone number</label>
                     <input id="phone" type="number" name="phonenumber" value="" required>
+                    <label for="phone">Your phone number</label>
                 </div>
                 <div class="field">
-                    <label for="username">Envato username</label>
                     <input id="username" type="text" name="email" value="" required>
+                    <label for="username">Envato username</label>
                 </div>
             </fieldset>
             <button class="signUp-form-btn" type="submit">Let me in!</button>
             <p>Hurry up, Limited seats availble</p>
             <p>*we will never spam your email</p>
+            <svg class="close-icon">
+                <use xlink:href="#icon-close"></use>
+            </svg>
         </form>
     </div>
 </section>
@@ -1533,6 +1555,12 @@
             <div class="contact_us-map-img">
                 <img src="img/map.png">
             </div>
+            <div class="contact_us-map-google hidden"></div>
+            <div class="show_more-icon-container hidden">
+                <svg class="show_more-icon">
+                    <use xlink:href="#show_more-icon"></use>
+                </svg>
+            </div>
             <div class="contact_us-map-overlay"></div>
         </div>
         <div class="contact_us-block">
@@ -1543,27 +1571,30 @@
                     </svg>
                 </div>
                 <p>Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122, Kingdom of Australia</p>
-                <a class="btn-info" href="#">View map</a>
+                <a class="btn-info btn-view-map" href="#">View map</a>
             </div>
             <form class="contact_us-form">
                 <fieldset>
                     <div class="field">
-                        <label for="contact_us-form-email">Type your email</label>
                         <input id="contact_us-form-email" type="email" name="email" value="" required>
+                        <label for="contact_us-form-email">Type your email</label>
                     </div>
                     <div class="field">
-                        <label for="contact_us-form-message">Type your message</label>
                         <textarea id="contact_us-form-message" rows="11" required></textarea>
+                        <label for="contact_us-form-message">Type your message</label>
                     </div>
                 </fieldset>
                 <button class="contact_us-form-btn" type="submit">Send message</button>
+                <svg class="close-icon">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
             </form>
         </div>
         <div class="contact_us-block mobile">
             <div class="contact_us-address mobile">
                 <p>Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122, Kingdom of Australia</p>
-                <a class="btn-info" href="#">View map</a>
-                <a class="btn-info" href="#">Contact us</a>
+                <a class="btn-info btn-view-map" href="#">View map</a>
+                <a class="btn-info btn-contact-us" href="#">Contact us</a>
             </div>
         </div>
     </div>
@@ -1598,6 +1629,9 @@
         </a>
     </footer>
 </section>
-
+<div class="modal-overlay hidden"></div>
+<script src="js/countdown.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/google_map.js"></script>
 </body>
 </html>
