@@ -6,9 +6,9 @@
     const contactUsMapOverlay = document.querySelector('.contact_us-map-overlay');
     const contactUsMapGoogle = document.querySelector('.contact_us-map-google');
     const showMoreIcon = document.querySelector('.show_more-icon-container');
-    let mapLoaded = false;
+    var mapLoaded = false;
 
-    function loadMap(){
+    function loadMap() {
         if (mapLoaded) return;
 
         window.initMap = function () {
@@ -30,7 +30,7 @@
         document.body.appendChild(script);
     }
 
-    viewMapButtonsArray.forEach(function(viewMapButton) {
+    viewMapButtonsArray.forEach(function (viewMapButton) {
         viewMapButton.addEventListener('click', function (event) {
             event.preventDefault();
             contactUsBlockArray.forEach(function (contactUsBlock) {

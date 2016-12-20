@@ -65,6 +65,14 @@
       @include justify-content(space-around);
     }
 
+    @include respond-to(435px) {
+      width: 60%;
+      overflow-x: hidden;
+      @include flex-flow(row nowrap);
+      @include justify-content(flex-start);
+      @include autoMargin;
+    }
+
     &-unit {
       @include box-sizing(border-box);
       font-size: 1rem;
@@ -73,6 +81,10 @@
       margin: 0 2.625em 2.625em 0;
       border-radius: 12px;
       background: $primaryBrightColor;
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
 
       @include respond-to(1100px) {
         font-size: 0.85rem;
@@ -95,21 +107,26 @@
       }
 
       @include respond-to(435px) {
-        width: 80%;
+        width: 100%;
+        margin-right: 5px;
+        margin-bottom: 0;
+        @include flex-shrink(0);
+        @include transition(all, 0.5s, ease-in);
 
-        &:nth-child(n+3) {
-          display: none;
+        &:nth-of-type(3n) {
+          margin-right: 5px;
         }
-      }
 
-      &:nth-of-type(3n) {
-        margin-right: 0;
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       &:hover {
         background: url('../img/speakers-texture.jpg');
         cursor: pointer;
       }
+
       &.speakers-section-unit-with-icon {
         &:hover {
           background: $primaryBrightColor;
@@ -164,19 +181,40 @@
         transform: translate(-50%, -50%);
       }
     }
-  }
 
-  .btn-info {
-    @include btn-info($primaryDarkColor);
-    margin: 0 auto;
-    display: none;
+    &-wrapper {
+      position: relative;
 
-    @include respond-to(435px) {
-      display: block;
-    }
-    @include respond-to(400px) {
-      width: 10em;
-      padding: 0.6em 0;
+      .speakers-section-move-icon {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10;
+
+        & svg {
+          width: 2.5rem;
+          height: 2.5rem;
+          fill: #4b4d4f;
+        }
+
+        &.disabled svg {
+          fill: #797b7c;
+        }
+
+        &.icon-back {
+          left: 3%;
+        }
+
+        &.icon-forward {
+          right: 3%;
+        }
+
+        @include respond-to(435px) {
+          display: block;
+        }
+      }
     }
   }
 }

@@ -3,7 +3,7 @@ var countdownUnitDays = countdown.querySelector('.countdown-unit-days');
 var countdownUnitHours = countdown.querySelector('.countdown-unit-hours');
 var countdownUnitMinutes = countdown.querySelector('.countdown-unit-minutes');
 var countdownUnitSeconds = countdown.querySelector('.countdown-unit-seconds');
-var deadline = '2017-03-10T09:00+1100';
+var deadline = 'Mon Apr 10 2017 00:00:00 GMT-0400';
 
 
 function getTimeRemaining(endtime){
@@ -22,19 +22,20 @@ function getTimeRemaining(endtime){
 }
 
    function initializeClock(endtime) {
-         function updateClock() {
-            var t = getTimeRemaining(endtime);
+       function updateClock() {
+           var t = getTimeRemaining(endtime);
 
-            countdownUnitDays.innerHTML = t.days;
-            countdownUnitHours.innerHTML = ('0' + t.hours).slice(-2);
-            countdownUnitMinutes.innerHTML = ('0' + t.minutes).slice(-2);
-            countdownUnitSeconds.innerHTML = ('0' + t.seconds).slice(-2);;
+           countdownUnitDays.innerHTML = t.days;
+           countdownUnitHours.innerHTML = ('0' + t.hours).slice(-2);
+           countdownUnitMinutes.innerHTML = ('0' + t.minutes).slice(-2);
+           countdownUnitSeconds.innerHTML = ('0' + t.seconds).slice(-2);
 
-            if (t.total <= 0) {
-                clearInterval(timeinterval);
-            }
-        }
-       updateClock();
+           if (t.total <= 0) {
+               clearInterval(timeinterval);
+           }
+       }
+
+       updateClock(endtime);
          var timeinterval = setInterval(updateClock, 1000);
     }
 

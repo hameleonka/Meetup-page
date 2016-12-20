@@ -47,6 +47,10 @@
           @include font($roboto, thin, 15px, #ffffff, uppercase);
           display: block;
           padding: 0.6666em;
+
+          &:hover {
+            color: $primaryBrightColor;
+          }
         }
       }
     }

@@ -88,7 +88,7 @@
       @include respond-to(450px) {
         margin-top: 4%;
         width: 50%;
-        flex:1 0 auto;
+        flex: 1 0 auto;
       }
       @include respond-to(400px) {
         font-size: 1em;
@@ -108,7 +108,7 @@
       position: relative;
       z-index: 10;
       margin-bottom: 2%;
-      flex-wrap:wrap;
+      flex-wrap: wrap;
     }
 
     @include respond-to(450px) {
@@ -353,16 +353,16 @@
     }
 
     & .close-icon {
-      display:none;
+      display: none;
       @include respond-to(715px) {
         display: block;
         position: absolute;
         z-index: 21;
-        top:2%;
-        right:2%;
-        width:1.8rem;
-        height:1.8rem;
-        fill:#90d23d;
+        top: 2%;
+        right: 2%;
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: #90d23d;
         cursor: pointer;
       }
     }
@@ -372,8 +372,8 @@
 .modal-overlay {
   position: fixed;
   z-index: 15;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   background: rgba(0, 0, 0, 0.7);
