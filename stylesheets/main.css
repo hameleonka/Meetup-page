@@ -1793,11 +1793,15 @@ a {
         text-transform: none;
         font-weight: 900;
         font-size: 2.8125em;
-        margin-bottom: 0.71111em; }
+        margin-bottom: 0.71111em;
+        width: 60%; }
         @media only screen and (max-width: 500px) {
           #speakers .speakers-section-unit h3 {
             font-size: 2.2em;
             margin-bottom: 0.5em; } }
+        @media only screen and (max-width: 435px) {
+          #speakers .speakers-section-unit h3 {
+            width: 100%; } }
       #speakers .speakers-section-unit p {
         font-family: "Roboto", sans-serif;
         font-size: 1.125rem;
