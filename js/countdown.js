@@ -1,9 +1,9 @@
-var countdown = document.querySelector('.countdown');
+;var countdown = document.querySelector('.countdown');
 var countdownUnitDays = countdown.querySelector('.countdown-unit-days');
 var countdownUnitHours = countdown.querySelector('.countdown-unit-hours');
 var countdownUnitMinutes = countdown.querySelector('.countdown-unit-minutes');
 var countdownUnitSeconds = countdown.querySelector('.countdown-unit-seconds');
-var deadline = 'Mon Mar 10 2017 00:00:00 GMT-0400';
+var deadline = 'Mon Sep 10 2017 00:00:00 GMT-0400';
 
 
 function getTimeRemaining(endtime){
